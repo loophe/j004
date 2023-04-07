@@ -16,7 +16,7 @@
     "lint": "dts lint",
     "prepare": "dts build",
     "size": "size-limit",
-    "start": "dts watch",
+    "run": "ts-node src/index.ts > tx.log",
     "test": "dts test"
   },
   "husky": {
@@ -33,7 +33,6 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "peerDependencies": {},
   "engines": {
     "node": ">=12"
   },
@@ -46,5 +45,18 @@
       "path": "dist/j004.esm.js",
       "limit": "10 KB"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@tsconfig/recommended": "^1.0.2",
+    "dts-cli": "^1.6.3",
+    "husky": "^8.0.3",
+    "size-limit": "^8.2.4",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "celery-node": "^0.5.9",
+    "web3": "^1.9.0"
+  }
 }

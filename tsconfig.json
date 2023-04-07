@@ -1,7 +1,14 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
-  "include": ["src", "types"],
   "compilerOptions": {
-    "module": "esnext",
-  }
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  // "include": ["./src/*"],
+  "exclude": [
+    "node_modules"
+  ]
 }
